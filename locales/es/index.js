@@ -6,7 +6,10 @@ export default {
   soonLanguagePost: 'Post available in English soon',
   comeBack: 'Volver atrás',
   indexPageHead: indexPageHead,
-  posts: 'Posts',
+  posts: 'Articulos',
   home: 'Home',
-  footer: footer
+  footer: footer,
+  navItems: {
+    blog: 'Articulos'
+  }
 }

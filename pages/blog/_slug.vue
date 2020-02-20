@@ -18,8 +18,7 @@
               <nuxt-link
                 v-for="(locale, i) in showLocales"
                 :key="i"
-                :to="`${locale.code == 'en' ? '' : '/' + locale.code}/blog/${trans}`"
-              >
+                :to="`${locale.code == 'en' ? '' : '/' + locale.code}/blog/${trans}`">
                   {{ $t('changeLanguagePost') }}
               </nuxt-link>
             </template>
@@ -58,10 +57,11 @@
 
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
 
-
   export default {
 
     async asyncData ({params, app}) {
+      console.log(app.i18n.locale)
+      console.log(params)
       const fileContent = await import(`~/contents/${app.i18n.locale}/blog/${params.slug}.md`)
       const attr = fileContent.attributes
       return {

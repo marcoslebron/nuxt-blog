@@ -3,7 +3,7 @@
     .container
       nuxt-link.logo-link(to="/")
         img(src="~/assets/images/logo-ml.svg")
-      .drawer-toggle(role="button" )
+      .drawer-toggle(role="button" @click="open")
         .bar
         .bar
         .bar
@@ -11,15 +11,21 @@
         LangSwitcher
         ul
           li
-            nuxt-link(to="/blog")
+            nuxt-link(to="/blog") {{ $t('navItems.blog') }}
 </template>
 <script>
 import LangSwitcher from '~/components/LangSwitcher'
+import { mapMutations } from "vuex"
 
 export default {
   name: "TheHeader",
   components:{
     LangSwitcher
+  },
+  methods:{
+    open() {
+      return this.$store.commit('toggleSidenav')
+    }
   }
 }
 </script>
@@ -40,7 +46,17 @@ export default {
     justify-content: space-between;
 
   }
-
+  .navigation-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+      margin-bottom: 0;
+    }
+    @media (max-width: $screen-sm){
+      display: none;
+    }
+  }
   .drawer-toggle{
     display: flex;
     flex-direction: column;

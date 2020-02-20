@@ -8,5 +8,8 @@ export default {
   indexPageHead: indexPageHead,
   posts: 'Posts',
   home: 'Home',
-  footer: footer
+  footer: footer,
+  navItems: {
+    blog: 'Posts'
+  }
 }

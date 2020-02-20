@@ -2,16 +2,19 @@
   <div class="layout">
     <Header/>
     <nuxt class="nuxt-content"/>
+    <SideNav/>
     <Footer/>
   </div>
 </template>
 <script>
   import Footer from '~/components/Sections/Footer'
   import Header from '~/components/Sections/Header'
+  import SideNav from '~/components/Sections/SideNav'
   export default {
     components: {
       Footer,
-      Header
+      Header,
+      SideNav
     }
   }
 </script>
