@@ -11,9 +11,10 @@
 
   import blogsEn from '~/contents/en/blogsEn.js'
   import blogsEs from '~/contents/es/blogsEs.js'
-
+  import {filter} from "lodash"
+  
   export default {
-    async asyncData ({app}) {
+    async asyncData ({params, app}) {
 
       const blogs = app.i18n.locale === 'en' ? blogsEn : blogsEs
       
@@ -24,9 +25,8 @@
 
       return Promise.all(blogs.map(blog => asyncImport(blog)))
       .then((res) => {
-        console.log(res)
         return {
-          blogs: res
+          blogs:  filter(res, {category: params.category})
         }
       })
     },
