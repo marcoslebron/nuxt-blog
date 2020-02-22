@@ -8,7 +8,7 @@
         .bar
         .bar
       .navigation-items
-        LangSwitcher
+        LangSwitcher(v-if="$route.path === '/'")
         ul
           li
             nuxt-link(to="/blog") {{ $t('navItems.blog') }}
