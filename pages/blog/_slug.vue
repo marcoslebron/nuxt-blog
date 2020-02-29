@@ -60,8 +60,6 @@
   export default {
 
     async asyncData ({params, app}) {
-      console.log(app.i18n.locale)
-      console.log(params)
       const fileContent = await import(`~/contents/${app.i18n.locale}/blog/${params.slug}.md`)
       const attr = fileContent.attributes
       return {
@@ -96,7 +94,7 @@
           lang: this.$i18n.locale,
         },
         meta: [
-          { name: "author", content: "Marina Aisa" },
+          { name: "author", content: "Marcos Lebron" },
           { name: "description", property: "og:description", content: this.description, hid: "description" },
           { property: "og:title", content: this.pageTitle },
           { property: "og:image", content: this.ogImage },

@@ -1,3 +1,3 @@
 export default [
-  'how-to-use-flexbox',
+  'how-to-use-the-flexbox',
 ]

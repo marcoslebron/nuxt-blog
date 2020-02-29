@@ -8,10 +8,12 @@
         .bar
         .bar
       .navigation-items
-        LangSwitcher(v-if="$route.path === '/'")
         ul
           li
             nuxt-link(to="/blog") {{ $t('navItems.blog') }}
+          li
+            nuxt-link(:to="localePath('about')") {{ $t('navItems.about')}}
+        LangSwitcher(v-if="showLangSwich")
 </template>
 <script>
 import LangSwitcher from '~/components/LangSwitcher'
@@ -21,6 +23,11 @@ export default {
   name: "TheHeader",
   components:{
     LangSwitcher
+  },
+  computed:{
+    showLangSwich(){
+      return this.$route.path === '/' || this.$route.path === '/es'
+    }
   },
   methods:{
     open() {
@@ -52,6 +59,10 @@ export default {
     justify-content: space-between;
     ul {
       margin-bottom: 0;
+      display: flex;
+      li {
+        padding: 0 5px;
+      }
     }
     @media (max-width: $screen-sm){
       display: none;
