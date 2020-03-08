@@ -7,6 +7,8 @@
         ul.nav-list
           li.nav-item
             nuxt-link(:to="localePath('blog')") {{ $t('navItems.blog') }}
+          li
+            nuxt-link(:to="localePath('about')") {{ $t('navItems.about')}}
 </template>
 <script lang="js">
 import LangSwitcher from '~/components/LangSwitcher'

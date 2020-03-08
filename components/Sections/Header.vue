@@ -10,7 +10,7 @@
       .navigation-items
         ul
           li
-            nuxt-link(to="/blog") {{ $t('navItems.blog') }}
+            nuxt-link(:to="localePath('blog')") {{ $t('navItems.blog') }}
           li
             nuxt-link(:to="localePath('about')") {{ $t('navItems.about')}}
         LangSwitcher(v-if="showLangSwich")
