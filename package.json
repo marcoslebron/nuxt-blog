@@ -1,6 +1,6 @@
 {
-  "name": "nuxt-markdown-blog-starter",
-  "version": "0.1",
+  "name": "marcos-blog",
+  "version": "1.0.1",
   "author": "marcoslebron <marcos@marcoslebron.com>",
   "private": true,
   "engines": {
