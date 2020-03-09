@@ -39,7 +39,10 @@ export default {
 .side-nav-content{
   height: 100%;
   width: 100%;
-
+  select{
+    color: #e6e6e6;
+    padding: 2rem 3rem 2rem 1.5rem;
+  }
   .side-nav-backdrop {
     position: fixed;
     background-color: #030303;

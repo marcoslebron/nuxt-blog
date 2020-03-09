@@ -25,4 +25,5 @@ The transition from being an ordinary employee to being a full-time freelancer w
 
 I think the most important of all is that I learned from mistakes and that I am here and decided to share my story.
 
-They will ask why do you create this blog? The reason is very simple as I had many questions in this way of which I had not the slightest idea how to achieve maybe you too or maybe you just want to learn together with me 🚀. Without more or less I motivate you to follow me on [Twitter](https://twitter.com/lebronmarcos) and subscribe to the blog feel free to send me an [email](mailto: lebron.marcos@gmail.com) with Any questions or concerns that arise.
+They will ask why do you create this blog? The reason is very simple as I had many questions in this way of which I had not the slightest idea how to achieve maybe you too or maybe you just want to learn together with me 🚀. Without more or less I motivate you to follow me on [Twitter](https://twitter.com/lebronmarcos) and subscribe to the blog feel free to send me an 
+[email](mailto:lebron.marcos@gmail.com) with Any questions or concerns that arise.
