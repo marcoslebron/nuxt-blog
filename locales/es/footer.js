@@ -1,3 +1,3 @@
 export default {
-  credits: ''
+  credits: 'Creado y mantenido por'
 }

@@ -1,5 +1,6 @@
 <template>
   <div class="page-index">
+    <HeroHeader/>
     <div class="container">
       <BlogSection :blogs="blogs"/>
     </div>
@@ -8,7 +9,7 @@
 
 <script>
   import BlogSection from "~/components/Sections/BlogSection"
-
+  import HeroHeader from "~/components/Sections/HeroHeader"
   import blogsEn from '~/contents/en/blogsEn.js'
   import blogsEs from '~/contents/es/blogsEs.js'
 
@@ -31,7 +32,7 @@
       })
     },
     
-    components: { BlogSection },
+    components: { BlogSection, HeroHeader },
 
     transition: {
       name: 'slide-fade'

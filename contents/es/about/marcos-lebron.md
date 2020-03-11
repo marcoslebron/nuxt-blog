@@ -6,8 +6,10 @@ color: '#8e7964'
 trans: 'about-marcos-lebron'
 ---
 
-## Acerca de mi
-Mi nombre es Marcos soy desarrollador frontend autodidacto, ¿cómo empecé?... buena pregrunta la verdad fue una montaña rusa con altos y bajos, frustraciones, noches sin dormir y asi por el estilo pero no todo fue malo pasaron muchas cosas buenas tambien.
+# Hola!, soy Marcos
+<image-responsive imageURL="marcos-lebron.png" style="text-align:center" width="10%" alt="Foto de donde se ve la cara de marcos lebron"/>
+
+Soy desarrollador frontend autodidacto, ¿cómo empecé?... buena pregrunta la verdad fue una montaña rusa con altos y bajos, frustraciones, noches sin dormir y asi por el estilo pero no todo fue malo pasaron muchas cosas buenas tambien.
 
 Pero te cuento todo empezó cuando termine el tecnólogo de multimedia un programa tecnico superior que dura alrededor de 3 años en un instituto tecnologico de mi pais, para ese entonces tenía un trabajo como digitador en una biblioteca, unos meses después un compañero de carrera me contactó para que cubriera una vacante donde él estaba trabajando como diseñador web. 
 

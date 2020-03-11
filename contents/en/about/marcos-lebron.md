@@ -6,8 +6,10 @@ color: '#8e7964'
 trans: 'acerca-marcos-lebron'
 ---
 
-## About me
-My name is Marcos, I am a self-taught frontend developer, how did I start? ... Good question, the truth was a roller coaster with highs and lows, frustrations, sleepless nights and so on, but not everything was bad, many good things happened too.
+## Hi!, I'm Marcos
+<image-responsive imageURL="marcos-lebron.png" style="text-align:center" width="10%" alt="Picture where you can see the face of marcos lebron"/>
+
+I am a self-taught frontend developer, how did I start? ... Good question, the truth was a roller coaster with highs and lows, frustrations, sleepless nights and so on, but not everything was bad, many good things happened too.
 
 But I tell you it all started when the multimedia technologist finished a superior technical program that lasts about 3 years in a technological institute of my country, by then I had a job as a digitizer in a library, a few months later a career partner contacted me to fill a vacancy where he was working as a web designer.
 

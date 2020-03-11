@@ -30,7 +30,7 @@
           </div>
         </div>
         <ImageResponsive
-          :imageURL="'blog/' + id + '/_main.jpg'"
+          :imageURL="'blog/' + id + '/_main.svg'"
           v-if="!noMainImage"
           width="100%"
           class="elevate-cover__img"

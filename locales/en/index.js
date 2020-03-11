@@ -10,6 +10,8 @@ export default {
   aboutPageHead: aboutPageHead,
   posts: 'Posts',
   home: 'Home',
+  heroHeader: "I'm a Frontend Developer and marketing enthusiastic.",
+  heroSubHeader: "Wherever you're going on your developer journey, I'm here to share my journey on the web.",
   footer: footer,
   navItems: {
     blog: 'Posts',
