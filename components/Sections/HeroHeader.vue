@@ -4,7 +4,7 @@
     .hero-content
       h1 {{ $t('heroHeader')}}
       h4 {{ $t('heroSubHeader')}}
-    .here-img
+    .hero-img
       ImageResponsive(:imageURL="`marcos-lebron.png`"
         :classes="'cardThumbnail'"
         :width="'300'"
@@ -32,7 +32,7 @@ export default {
     right: 0;
     bottom: -2px;
     left: 0;
-    z-index: 9;
+    z-index: 1;
     width: 100%;
     height: 60px;
     content: '';
@@ -56,6 +56,11 @@ export default {
       h1 {
         font-weight: 600;
         color: #1c2f38;
+      }
+    }
+    .hero-img{
+      @media (max-width: $screen-sm){
+        padding: 60px 0;
       }
     }
   }

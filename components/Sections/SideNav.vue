@@ -49,9 +49,11 @@ export default {
     top: 0;
     opacity: 0.4;
     width: 100%;
+    z-index: 1;
     height: 100%;
   }
   .side-nav {
+    z-index: 1;
     position: fixed;
     background-color: #08a8f2;
     top: 0;
