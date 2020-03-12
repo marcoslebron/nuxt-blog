@@ -46,3 +46,14 @@ Otra propiedad importante es la propiedad `flex-wrap` la cual habilita la multil
 	}
 ```
 Es importante destacar que si los hijos tiene un un ancho predeterminado y utilizamos el valor `nowrap` en la propiedad `flex-wrap` el navegador reacomodara el ancho de los mismo si estos exeden el ando del contenedor padre.
+
+Tambien podemos definir los dos valores de `flex-wrap` y `flex-direction` en una sola propiedad `flex-flow`
+
+```css
+  #wrapper {
+	  display: flex; 
+    flex-flow: row wrap; /* <flex-direction> <flex-wrap>*/
+	}
+```
+
+## Alineando los elementos hijos

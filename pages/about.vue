@@ -3,6 +3,7 @@
   .container.small
     client-only
       DynamicMarkdown(:render-func="renderFunc" :static-render-funcs="staticRenderFuncs")
+
 </template>
 <script>
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"

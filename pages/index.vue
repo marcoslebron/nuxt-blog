@@ -25,7 +25,6 @@
 
       return Promise.all(blogs.map(blog => asyncImport(blog)))
       .then((res) => {
-        console.log(res)
         return {
           blogs: res
         }

@@ -13,6 +13,11 @@ export default {
   heroHeader: "I'm a Frontend Developer and marketing enthusiastic.",
   heroSubHeader: "Wherever you're going on your developer journey, I'm here to share my journey on the web.",
   footer: footer,
+  newsletterTitle: "Join the Newsletter",
+  newsletterSubTitle: "Subscribe to get our latest content by email.",
+  newsletterPlaceholder: "Your email address",
+  newsletterButton: "Subscribe",
+  newsletterNospam: "I won't send you spam. Unsubscribe at any time.",
   navItems: {
     blog: 'Posts',
     about: 'About Me'
