@@ -55,7 +55,8 @@ Tambien podemos definir los dos valores de `flex-wrap` y `flex-direction` en una
     flex-flow: row wrap; /* <flex-direction> <flex-wrap>*/
   }
 ```
-### Propiedad `justify-content`
+### Propiedad 
+`justify-content`
 Define la posicion de los elementos con respecto al eje principal 
 ```css
   #wrapper {
@@ -66,7 +67,7 @@ Define la posicion de los elementos con respecto al eje principal
   }
 ```
 `justify-content: flex-start`
-<image-responsive imageURL="blog/how-to-use-flexbox/flex-04.svg" width="100%" alt="Foto de los ejes donde se representa el eje secundario del sistema de flexbox"/>
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-04.svg" width="100%" alt="Foto donde presenta flex-start de la propiedad justify-content"/>
 
 ```css
   #wrapper {
@@ -77,7 +78,7 @@ Define la posicion de los elementos con respecto al eje principal
   }
 ```
 `justify-content: flex-end`
-<image-responsive imageURL="blog/how-to-use-flexbox/flex-05.svg" width="100%" alt="Foto de los ejes donde se representa el eje secundario del sistema de flexbox"/>
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-05.svg" width="100%" alt="Foto donde presenta flex-end de la propiedad justify-content"/>
 
 ```css
   #wrapper {
@@ -88,7 +89,7 @@ Define la posicion de los elementos con respecto al eje principal
   }
 ```
 `justify-content: center`
-<image-responsive imageURL="blog/how-to-use-flexbox/flex-06.svg" width="100%" alt="Foto de los ejes donde se representa el eje secundario del sistema de flexbox"/>
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-06.svg" width="100%" alt="Foto donde presenta center de la propiedad justify-content"/>
 
 ```css
   #wrapper {
@@ -99,7 +100,7 @@ Define la posicion de los elementos con respecto al eje principal
   }
 ```
 `justify-content: space-between`
-<image-responsive imageURL="blog/how-to-use-flexbox/flex-07.svg" width="100%" alt="Foto de los ejes donde se representa el eje secundario del sistema de flexbox"/>
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-07.svg" width="100%" alt="Foto donde presenta space-between de la propiedad justify-content"/>
 
 ```css
   #wrapper {
@@ -110,7 +111,7 @@ Define la posicion de los elementos con respecto al eje principal
   }
 ```
 `justify-content: space-around`
-<image-responsive imageURL="blog/how-to-use-flexbox/flex-09.svg" width="100%" alt="Foto de los ejes donde se representa el eje secundario del sistema de flexbox"/>
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-09.svg" width="100%" alt="Foto donde presenta space-around de la propiedad justify-content"/>
 
 ```css
   #wrapper {
@@ -121,10 +122,66 @@ Define la posicion de los elementos con respecto al eje principal
   }
 ```
 `justify-content: space-evenly`
-<image-responsive imageURL="blog/how-to-use-flexbox/flex-08.svg" width="100%" alt="Foto de los ejes donde se representa el eje secundario del sistema de flexbox"/>
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-08.svg" width="100%" alt="Foto donde presenta space-evenly de la propiedad justify-content"/>
 
-### Propiedad `align-items`
+### Propiedad 
+`align-items`
 Define la posicion de los elementos con respecto al eje secundario
+`align-items: flex-start`
+```css
+  #wrapper {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+```
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-04.svg" width="100%" alt="Foto donde presenta el valor flex-start de la propiedad align-items"/>
+
+`align-items: flex-end`
+```css
+  #wrapper {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+```
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-11.svg" width="100%" alt="Foto donde presenta el valor flex-end de la propiedad align-items"/>
+
+`align-items: center`
+```css
+  #wrapper {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+```
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-12.svg" width="100%" alt="Foto donde presenta el valor center de la propiedad align-items"/>
+
+`align-items: stretch`
+```css
+  #wrapper {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+```
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-13.svg" width="100%" alt="Foto donde presenta el valor stretch de la propiedad align-items"/>
+
+`align-items: baseline`
+```css
+  #wrapper {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+```
+<image-responsive imageURL="blog/how-to-use-flexbox/flex-10.svg" width="100%" alt="Foto donde presenta el valor baseline de la propiedad align-items"/>
+
 ## Alineando los elementos hijos
 
 En caso queramos tener mas control de los objetos hijos dentro del contenedor podemos asignar propiedades a los mismos, debemos destacar que al modificar dichas propiedades estamos manipulando como los objetos hijos se muestran en el espacio disponible en el contenedor padre
