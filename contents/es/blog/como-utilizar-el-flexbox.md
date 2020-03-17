@@ -182,6 +182,25 @@ Define la posicion de los elementos con respecto al eje secundario
 ```
 <image-responsive imageURL="blog/how-to-use-flexbox/flex-10.svg" width="100%" alt="Foto donde presenta el valor baseline de la propiedad align-items"/>
 
+### align-self
+Esta propiedad nos permitar modificar directamente el alineamiento de un elemento hijo en el eje secundario. `align-self` acepta los mismos valores que `align-items` (`flex-start`, `flex-end`, `center` etc)
+
+```css
+  #wrapper {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .items{
+    width: 100px;
+  }
+  .item3 {
+    align-self: center;
+  }
+```
+<image-responsive imageURL="blog/how-to-use-flexbox/align-self-14.svg" width="100%" alt="Foto donde presenta el valor center de la propiedad align-self"/>
+
 ## Alineando los elementos hijos
 
 En caso queramos tener mas control de los objetos hijos dentro del contenedor podemos asignar propiedades a los mismos, debemos destacar que al modificar dichas propiedades estamos manipulando como los objetos hijos se muestran en el espacio disponible en el contenedor padre
