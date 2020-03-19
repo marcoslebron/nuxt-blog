@@ -10,7 +10,7 @@ export default {
   aboutPageHead: aboutPageHead,
   posts: 'Posts',
   home: 'Home',
-  heroHeader: "I'm a Frontend Developer and marketing enthusiastic.",
+  heroHeader: "I'm a Frontend Developer, I create things",
   heroSubHeader: "Wherever you're going on your developer journey, I'm here to share my journey on the web.",
   footer: footer,
   newsletterTitle: "Join the Newsletter",
