@@ -11,7 +11,7 @@ export default {
   posts: 'Articulos',
   home: 'Home',
   heroHeader: "Soy Dessarrollador frontend, Yo creo cosas",
-  heroSubHeader: "Donde quiera que vaya en su viaje de desarrollador, estoy aquí para compartir mi viaje en la web.",
+  heroSubHeader: "Estoy aquí para compartir mi viaje en la web.",
   footer: footer,
   newsletterTitle: "Unete a nuestro Boletin informativo",
   newsletterSubTitle: "Suscríbete para recibir nuestro últimos articulos y tutoriales por correo electrónico.",
