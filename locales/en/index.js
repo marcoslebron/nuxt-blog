@@ -14,7 +14,7 @@ export default {
   heroSubHeader: "Wherever you're going on your developer journey, I'm here to share my journey with you.",
   footer: footer,
   newsletterTitle: "Join the Newsletter",
-  newsletterSubTitle: "Subscribe to get our latest content by email.",
+  newsletterSubTitle: "Subscribe to stay in the loop. ",
   newsletterPlaceholder: "Your email address",
   newsletterButton: "Subscribe",
   newsletterNospam: "I won't send you spam. Unsubscribe at any time.",
