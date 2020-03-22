@@ -29,10 +29,15 @@ Aqui la propiedad `display` inicializa la utilizacion de modulos flexibles en el
 ## Los dos ejes
 <image-responsive imageURL="blog/how-to-use-flexbox/flexbox-es-01.svg" width="100%" alt="Foto de los ejes donde se representa el eje principal y el eje secundario del sistema de flexbox"/>
 
-El eje principal esta determinado por la propiedad `flex-direction` a la cual toma como valores `row`, `row-reverse`, `column` y `column-reverse` cuando utilizamos `row` como valor el eje principal se depliega de izquierda a derecha y el eje secundario en columnas como en la imagen mas arriba, por el contrario cuando utilizamos `column` el eje principal se depliega de arriba a abajo y el eje secundario de despliega a lo largo de las filas.
+## Eje Principal
+El eje principal esta determinado por la propiedad `flex-direction` a la cual toma como valores `row`, `row-reverse`, `column` y `column-reverse` cuando utilizamos `row` como valor el eje principal se depliega de izquierda a derecha.
+
+## Eje secundario
+El eje secundario en columnas como en la imagen mas arriba, por el contrario cuando utilizamos `column` el eje principal se depliega de arriba a abajo y el eje secundario de despliega a lo largo de las filas.
 
 <image-responsive imageURL="blog/how-to-use-flexbox/flexbox-03.svg" width="100%" alt="Foto de los ejes donde se representa el eje secundario del sistema de flexbox"/>
 
+## flex-wrap
 Otra propiedad importante es la propiedad `flex-wrap` la cual habilita la multilinea de los hijos dentro del contenedor tomando como valor `wrap`, `nowrap` & `wrap-reverse`, siendo `nowrap` el valor por defecto.
 
 ```css
@@ -55,7 +60,7 @@ Tambien podemos definir los dos valores de `flex-wrap` y `flex-direction` en una
     flex-flow: row wrap; /* <flex-direction> <flex-wrap>*/
   }
 ```
-### Propiedad 
+## justify-content 
 `justify-content`
 Define la posicion de los elementos con respecto al eje principal 
 ```css
@@ -124,7 +129,7 @@ Define la posicion de los elementos con respecto al eje principal
 `justify-content: space-evenly`
 <image-responsive imageURL="blog/how-to-use-flexbox/flex-08.svg" width="100%" alt="Foto donde presenta space-evenly de la propiedad justify-content"/>
 
-### Propiedad 
+## align-items 
 `align-items`
 Define la posicion de los elementos con respecto al eje secundario
 `align-items: flex-start`
@@ -249,3 +254,17 @@ Comunmente se utiliza el atajo `flex` para definir los tres valores en una sola 
     flex: 1 1 auto; /* flex-grow flex-shrink flex-basis */
   }
 ```
+### Los navegadores que soportan la propiedad flexbox son son los siguientes:
+- Safari 6.1+ (prefixed with -webkit-)
+- Android 4.4+
+- iOS 7.1+ (prefixed with -webkit-)
+- Chrome 29+
+- Firefox 28+
+- Internet Explorer 11+
+- Opera 17+
+
+[Fuente](https://caniuse.com/#feat=flexbox).
+
+## Conclución
+Hemos cubierto la mayoria de las propiedades del flexbox. Lo siguiente es que pongas en practica lo aprendido.
+

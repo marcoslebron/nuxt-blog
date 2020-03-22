@@ -29,10 +29,15 @@ Here the `display` property initializes the use of flexible modules in the id co
 ## The two axes
 <image-responsive imageURL="blog/how-to-use-flexbox/flexbox-en-02.svg" width="100%" alt="Photo of the axes where the main axis and the secondary axis of the system are represented from flexbox "/>
 
-The main axis is determined by the `flex-direction` property which takes `row`, `row-reverse`,` column` and `column-reverse` as values ​​when we use `row` as the value the main axis is displayed from left to right and the secondary axis in columns as in the image above, on the contrary when we use `column` the main axis is displayed from top to bottom and the secondary axis is displayed along the rows.
+### Main Axis
+The main axis is determined by the `flex-direction` property which takes `row`, `row-reverse`,` column` and `column-reverse` as values ​​when we use `row` as the value the main axis is displayed from left to right.
+
+### Secundary Axis or cross axis
+The secondary axis in columns as in the image above, on the contrary when we use `column` the main axis is displayed from top to bottom and the secondary axis is displayed along the rows.
 
 <image-responsive imageURL="blog/how-to-use-flexbox/flexbox-03.svg" width="100%" alt="Photo of the axes where the secondary axis of the flexbox system is represented" />
 
+## flex-wrap
 Another important property is the `flex-wrap` property which enables the multiline of the children inside the container taking `wrap`, `nowrap` &` wrap-reverse` as the value, with `nowrap` being the default value.
 
 ```css
@@ -56,7 +61,7 @@ We can also define the two values ​​of `flex-wrap` and` flex-direction` in a
     flex-flow: row wrap; / * <flex-direction> <flex-wrap> * /
   }
 ```
-### Property
+## justify-content
 `justify-content`
 Defines the position of the elements with respect to the main axis
 ```css
@@ -131,7 +136,7 @@ Defines the position of the elements with respect to the main axis
 `justify-content: space-evenly`
 <image-responsive imageURL="blog/how-to-use-flexbox/flex-08.svg" width="100%" alt="Photo showing space-evenly of the justify-content property" />
 
-### Property
+## align-items
 `align-items`
 Defines the position of the elements with respect to the secondary axis
 `align-items: flex-start`
@@ -190,7 +195,7 @@ Defines the position of the elements with respect to the secondary axis
 ```
 <image-responsive imageURL="blog/how-to-use-flexbox/flex-10.svg" width="100%" alt="Photo showing the baseline value of the align-items property" />
 
-### align-self
+## align-self
 This property allows us to directly modify the alignment of a child element in the secondary axis. `align-self` accepts the same values ​​as` align-items` (`flex-start`,` flex-end`, `center` etc)
 
 ```css
@@ -257,3 +262,17 @@ Commonly, the shortcut `flex` is used to define the three values ​​in a sing
     flex: 1 1 auto; / * flex-grow flex-shrink flex-basis * /
   }
 ```
+### The browser support for the flexbox specification is:
+- Safari 6.1+ (prefixed with -webkit-)
+- Android 4.4+
+- iOS 7.1+ (prefixed with -webkit-)
+- Chrome 29+
+- Firefox 28+
+- Internet Explorer 11+
+- Opera 17+
+
+[Source](https://caniuse.com/#feat=flexbox).
+
+## Conclusion
+We've covered all the most common CSS flexbox properties. The next step is to try to make any project using the flexbox properties, go and practice.
+
