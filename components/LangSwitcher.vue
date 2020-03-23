@@ -25,7 +25,8 @@ export default {
 <style lang="scss">
 select {
   border-radius: 0;
-  color: $primary;
+  font-weight: 600;
+  color: #a2a8ab;
   padding: 1rem 3rem 1rem 1rem;
   border: 1px solid transparent;
   -webkit-appearance: none;

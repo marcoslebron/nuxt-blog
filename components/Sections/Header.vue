@@ -62,6 +62,13 @@ export default {
       display: flex;
       li {
         padding: 0 5px;
+        a {
+          font-weight: 600;
+          color: #1d3039;
+          &:hover{
+            color: #09a7f2;
+          }
+        }
       }
     }
     @media (max-width: $screen-sm){

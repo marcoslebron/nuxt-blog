@@ -61,6 +61,7 @@ export default {
     height: 100%;
     a{
       color: white;
+      font-weight: 600;
     }
   }
 }
