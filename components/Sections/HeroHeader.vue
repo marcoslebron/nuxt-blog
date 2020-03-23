@@ -3,7 +3,15 @@
   .container
     .hero-content
       h1 {{ $t('heroHeader')}}
+      vue-typed-js(
+        :strings="$t('headerAnimateArray')" 
+        :loop="true" 
+        :loopCount="2" 
+        :typeSpeed="80"
+        :fadeOutDelay="500")
+        h1.typing
       h4 {{ $t('heroSubHeader')}}
+      
     .hero-img
       ImageResponsive(:imageURL="`marcos-lebron.png`"
         :classes="'cardThumbnail'"
@@ -13,8 +21,22 @@
 
 </template>
 <script>
+
 export default {
-  
+  data(){
+    return {
+      items: [
+        'Playing',
+        'with',
+        'Codepen',
+        'is so much',
+        'funz!'
+      ],
+      app: "",
+      count: 0,
+      index: 0,
+    }
+  },
 }
 </script>
 <style lang="scss">
@@ -52,10 +74,11 @@ export default {
     justify-content: space-between;
     .hero-content {
       padding: 60px 0;
-      width: 500px;
+      width: 525px;
       h1 {
         font-weight: 600;
         color: #1c2f38;
+        margin-bottom: 0;
       }
     }
     .hero-img{

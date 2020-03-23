@@ -115,11 +115,11 @@ module.exports = {
       });
     }
   },
-  plugins: ['~/plugins/lazyload', '~/plugins/globalComponents', { src: '~plugins/ga.js', mode: 'client', ssr: false }],
+  plugins: ['~/plugins/lazyload', '~/plugins/vue-typed-js', '~/plugins/globalComponents', { src: '~plugins/ga.js', mode: 'client', ssr: false }],
   modules: [  
     '@nuxtjs/style-resources',
     ['nuxt-i18n', I18N],
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
 
   styleResources: {
