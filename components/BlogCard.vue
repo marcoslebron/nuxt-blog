@@ -3,7 +3,13 @@
     <nuxt-link itemprop="url"
       :to="localePath({ name: 'blog-slug', params: { slug: blog.name }})"
     >
-    
+      <meta itemprop="author" content="Marcos Lebron">
+      <meta itemprop="headline" :content="title">
+      <meta itemprop="datePublished" :content="year">
+      <div itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="publisher">
+        <meta itemprop="name" content="www.marcoslebron.com">
+      </div>
+      <meta itemprop="dateModified" :content="latUpdate">
       <ImageResponsive
         :imageURL="`blog/${blog.id}/_thumbnail.svg`"
         :classes="'cardThumbnail'"
