@@ -1,7 +1,7 @@
 <template>
   <div class="blogSelected">
     <div class="intro">
-      <div class="elevate-cover">
+      <div class="elevate-cover" itemscope itemtype="http://schema.org/Article">
         <div class="elevate-cover__textOffset">
           <div class="elevate-cover__left">
             <nuxt-link :to="localePath('index')">
@@ -23,13 +23,16 @@
               </nuxt-link>
             </template>
             <span v-else>{{ $t('soonLanguagePost') }}</span>
-            <h1 class="elevate-cover__title">
+            <h1 itemprop="name" class="elevate-cover__title">
               {{ title }}
             </h1>
-            <p class="elevate-cover__description">{{ description }}</p>
+            <meta itemprop="author" content="Marcos Lebron">
+            <meta itemprop="image" :content="'blog/' + id + '/_main.svg'">
+            <meta itemprop="datePublished" :content="year">
+            <p itemprop="articleBody" class="elevate-cover__description">{{ description }}</p>
           </div>
         </div>
-        <ImageResponsive
+        <ImageResponsive 
           :imageURL="'blog/' + id + '/_main.svg'"
           v-if="!noMainImage"
           width="100%"
@@ -116,7 +119,7 @@
         return `${process.env.baseUrl}/images/blog/${this.id}/_thumbnail.jpg`;
       },
       pageTitle () {
-        return this.title + ' – Marina Aisa';
+        return this.title + ' – Marcos Lebron';
       },
       showLocales () {
         return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
