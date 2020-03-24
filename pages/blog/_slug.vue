@@ -29,9 +29,11 @@
             <meta itemprop="author" content="Marcos Lebron">
             <meta itemprop="headline" :content="title">
             <meta itemprop="datePublished" :content="year">
-            <meta itemprop="publisher" content="www.marcoslebron.com">
+            <div itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="publisher">
+              <meta itemprop="name" content="www.marcoslebron.com">
+            </div>
             <meta itemprop="mainEntityOfPage" content="www.marcoslebron.com">
-            <meta itemprop="dateModified" :content="year">
+            <meta itemprop="dateModified" :content="latUpdate">
             <p class="elevate-cover__description">{{ description }}</p>
           </div>
         </div>
