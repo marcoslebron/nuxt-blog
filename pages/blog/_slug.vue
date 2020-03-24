@@ -27,12 +27,14 @@
               {{ title }}
             </h1>
             <meta itemprop="author" content="Marcos Lebron">
-            <meta itemprop="image" :content="'blog/' + id + '/_main.svg'">
+            <meta itemprop="headline" :content="description">
             <meta itemprop="datePublished" :content="year">
-            <p itemprop="articleBody" class="elevate-cover__description">{{ description }}</p>
+            <meta itemprop="publisher" content="www.marcoslebron.com">
+            <p class="elevate-cover__description">{{ description }}</p>
           </div>
         </div>
-        <ImageResponsive 
+        <ImageResponsive
+          itemprop="image"
           :imageURL="'blog/' + id + '/_main.svg'"
           v-if="!noMainImage"
           width="100%"
@@ -48,6 +50,7 @@
     <div class="container small">
       <client-only>
         <DynamicMarkdown
+          itemprop="articleBody"
           :render-func="renderFunc"
           :static-render-funcs="staticRenderFuncs"
           :extra-component="extraComponent" />
