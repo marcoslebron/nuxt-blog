@@ -4,6 +4,7 @@
     :class="`image-placeholder ${isRounded}`"
   >
     <img
+      itemprop="image"
       :data-src="imageRequired"
       :data-loading="imageRequired.placeholder"
       :width="width"

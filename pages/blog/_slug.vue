@@ -27,14 +27,15 @@
               {{ title }}
             </h1>
             <meta itemprop="author" content="Marcos Lebron">
-            <meta itemprop="headline" :content="description">
+            <meta itemprop="headline" :content="title">
             <meta itemprop="datePublished" :content="year">
             <meta itemprop="publisher" content="www.marcoslebron.com">
+            <meta itemprop="mainEntityOfPage" content="www.marcoslebron.com">
+            <meta itemprop="dateModified" :content="year">
             <p class="elevate-cover__description">{{ description }}</p>
           </div>
         </div>
         <ImageResponsive
-          itemprop="image"
           :imageURL="'blog/' + id + '/_main.svg'"
           v-if="!noMainImage"
           width="100%"
@@ -73,6 +74,7 @@
         title: attr.title,
         trans: attr.trans,
         year: attr.year,
+        latUpdate: attr.updatedDate,
         id: attr.id,
         cardAlt: attr.cardAlt,
         noMainImage: attr.noMainImage,

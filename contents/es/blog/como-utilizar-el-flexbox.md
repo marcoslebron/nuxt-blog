@@ -3,6 +3,7 @@ name: 'como-utilizar-el-flexbox'
 trans: 'how-to-use-the-flexbox'
 title: Como utilizar el flexbox
 year: 21 Febrero 2020
+updatedDate: 21 Marz 2020
 color: '#edece7'
 category: 'css'
 isTextColorDark: true
