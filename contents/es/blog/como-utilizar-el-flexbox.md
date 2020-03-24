@@ -6,6 +6,7 @@ year: 21 Febrero 2020
 updatedDate: 21 Marz 2020
 color: '#edece7'
 category: 'css'
+cardAlt: 'Articulo de como utilizar flexbox o cajas flexibles'
 isTextColorDark: true
 noMainImage: false
 # extraComponent: 'Datatable'

@@ -4,12 +4,12 @@
       :to="localePath({ name: 'blog-slug', params: { slug: blog.name }})"
     >
       <meta itemprop="author" content="Marcos Lebron">
-      <meta itemprop="headline" :content="title">
-      <meta itemprop="datePublished" :content="year">
+      <meta itemprop="headline" :content="blog.title">
+      <meta itemprop="datePublished" :content="blog.year">
       <div itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="publisher">
         <meta itemprop="name" content="www.marcoslebron.com">
       </div>
-      <meta itemprop="dateModified" :content="latUpdate">
+      <meta itemprop="dateModified" :content="blog.latUpdate">
       <ImageResponsive
         :imageURL="`blog/${blog.id}/_thumbnail.svg`"
         :classes="'cardThumbnail'"

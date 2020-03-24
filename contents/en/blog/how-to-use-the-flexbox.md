@@ -6,6 +6,7 @@ year: 21 Feb 2020
 updatedDate: 21 Mar 2020
 color: '#edece7'
 category: 'css'
+cardAlt: 'Article on how to use the flexbox'
 isTextColorDark: true
 noMainImage: false
 # extraComponent: 'Datatable'
