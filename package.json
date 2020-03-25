@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
-    "acorn": "6.4.1",
+    "acorn": "7.1.1",
     "lodash": "^4.17.15",
     "markdown-it": "^10.0.0",
     "markdown-it-prism": "^2.0.5",
@@ -28,11 +28,11 @@
     "analyze": "nuxt build --analyze"
   },
   "devDependencies": {
-    "frontmatter-markdown-loader": "^3.2.1",
+    "frontmatter-markdown-loader": "3.3.0",
     "node-sass": "^4.13.0",
     "pug-plain-loader": "^1.0.0",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^8.0.0",
-    "sharp": "^0.25.1"
+    "sharp": "0.25.2"
   }
 }
