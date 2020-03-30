@@ -169,10 +169,105 @@ export default class LayoutComponent extends Vue {
 As you can see this is how you create a single file component with TypeScript data properties can be attributes of the class, computed properties work as simple getters read more about this [getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get), hooks methods are written in the class as methods.
 
 
-## <a href="#important-files-in-ts-projects">$emit to @Emit Decorator
-You may be asking by now what about the  how the hell we can use the $emit in the class components?
-## <a href="#important-files-in-ts-projects">watch:{} to @Watch Decorator
-## <a href="#important-files-in-ts-projects">mixins in vue class components
+## <a href="#important-files-in-ts-projects">Decorator for $emit </a> 
+Here a good exampla of the `@Emit()` decorator:
+```javascript
+import {Component, Vue, Prop, Emit} from "vue-property-decorator"
+
+export default class Sidebar extends Vue {
+  @Emit('onClickedLink')// if not parameter set the name of the below method will be used instead
+  onClick(value: string) {
+    return value;
+  }
+}
+```
+then on the parent components:
+
+```javascript
+<template>
+<div class="page-layout" :class="cssLayout">
+  <sidebar @onClickedLink="setActiveLink"/>
+  ....
+  ..
+  .
+
+```
+## <a href="#important-files-in-ts-projects">Decorator for watch:{} object </a>
+Here a good exampla of the `@Watch()` decorator:
+
+```javascript
+<script lang="ts">
+  import {Component, Vue, Prop, Emit, Watch} from "vue-property-decorator"
+  export default class Sidebar extends vue {
+    public opened: boolean = false;
+
+    @Watch("opened") // attribute you want to watch
+    onSidebarOpen(val: boolean) {
+      if (val: boolean, old: boolean) {
+        this.userOpenSidebar();
+      }
+    }
+  }
+  ...
+  ..
+  .
+```
+## <a href="#important-files-in-ts-projects">Mixins in vue class components </a>
+Ok now, lets talk about mixins, I had a hard time dealing with this when I first started working with Typescript in vuejs. But it doest have to be that hard you would say... But if you don't know if like your trying to play a guessing game.
+Let see how we can overcome this:
+
+First the mixing only containing `<script lang="ts"></script>` tag:
+```javascript
+import { Component, Vue, Prop } from "vue-property-decorator";
+
+@Component({})
+export default class Checkout extends Vue {
+  @Prop() public data: object;
+
+  public get productPrice(): number {
+    return this.product.price_cents;
+  }
+}
+```
+
+then the component you wish to use the mixin:
+
+```javascript
+<script lang="ts">
+  import { Component } from "vue-property-decorator";
+  import { mixins } from "vue-class-component"; 
+  import CheckoutMixin from "../mixins/Checkout";
+
+@Component({
+  name: "CartItem"
+})
+export default class CartItem extends mixins(CheckoutMixin) {
+  //all methods and attributes will be available in this class now
+  ...
+}
+```
+To know more in deeps how this works under the hood i advise you to go the TypeScript docs about inheritance
+[inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance)
+
 ## <a href="#important-notes">Important notes</a>
+tsconfig.json
+Contains compiler options and specifies the location of root files.
+
+tslint.json
+Options and rules for Typescript linting, for TSlint.
+
+app.ts
+The entry file for the project.
+
+shims-tsx.d.ts
+Allows the use of .tsx files. Read more about this here.
+
+shims-vue.d.ts
+Allows .vue single file components to be imported and used.
 
 ## <a href="#setting-up-vuejs">#</a> Conclusions
+In conclusion we have learned to add typescript to an existing project with webpack. How to init a new project with TypeScript using the vue cli wizard. You saw the structure of a vue class component and its decorators methods. 
+
+The main point of having typescript enable in your app is to use types in your classes, objects & functions so when a bug emerge will be easier for you to detect the couse of the problem.
+
+That’s all for this part, if you enjoyed this article dont forget to follow me on twitter and subscribe to the newsletter to get weekly articles update right in your inbox. Thanks for reading!
