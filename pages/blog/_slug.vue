@@ -144,7 +144,7 @@
         return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
       },
       imageRequired () {
-        return `${process.env.baseUrl}` + require(`../../assets/images/blog/${this.id}/_thumbnail.svg`)
+        return `${process.env.baseUrl}` + require(`../../assets/images/blog/${this.id}/_thumbnail.png`)
       },
       hreflang () {
         if (!this.trans) {
