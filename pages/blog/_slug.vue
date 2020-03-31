@@ -58,6 +58,10 @@
           :static-render-funcs="staticRenderFuncs"
           :extra-component="extraComponent" />
       </client-only>
+      <social-share 
+        :url="urlPath"
+        :title='title'
+        :description='description' />
     </div>
   </div>
 </template>
@@ -65,7 +69,7 @@
 <script lang="js">
 
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
-
+  import SocialShare from "~/components/SocialShare.vue"
   export default {
 
     async asyncData ({params, app}) {
@@ -95,7 +99,7 @@
       seo: false
     },
 
-    components: { DynamicMarkdown},
+    components: { DynamicMarkdown, SocialShare},
 
     head () {
       return {
@@ -107,9 +111,12 @@
           { name: "author", content: "Marcos Lebron" },
           { name: "description", property: "og:description", content: this.description, hid: "description" },
           { property: "og:title", content: this.pageTitle },
-          { property: "og:image", content: this.ogImage },
+          { property: "og:image", content: this.imageRequired },
+          { name: "twitter:card", content: "summary_large_image"},
+          { nmae: "twitter:site", content: "marcoslebron.com"},
+          { name: "twitter:title", content: this.pageTitle },
           { name: "twitter:description", content: this.description },
-          { name: "twitter:image", content: this.ogImage }
+          { name: "twitter:image", content: this.imageRequired }
         ],
         link: [
           this.hreflang
@@ -123,13 +130,19 @@
 
     computed: {
       ogImage () {
-        return `${process.env.baseUrl}/images/blog/${this.id}/_thumbnail.jpg`;
+        return `${process.env.baseUrl}/images/blog/${this.id}/_thumbnail.svg`;
+      },
+      urlPath () {
+        return `${process.env.baseUrl}${this.$route.fullPath}`
       },
       pageTitle () {
         return this.title + ' – Marcos Lebron';
       },
       showLocales () {
         return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
+      },
+      imageRequired () {
+        return require(`../../assets/images/blog/${this.id}/_thumbnail.svg`)
       },
       hreflang () {
         if (!this.trans) {

@@ -42,7 +42,6 @@ module.exports = {
       { name: 'robots', content: 'index, follow' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@@lebronmarcos' },
-      { property: 'og:type', content: 'profile' },
       { property: 'og:updated_time', content: builtAt }
     ],
     link: [
