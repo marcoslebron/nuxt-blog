@@ -70,7 +70,6 @@
 
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
   import SocialShare from "~/components/SocialShare.vue"
-  import filter from "lodash/filter"
   export default {
 
     async asyncData ({params, app}) {
