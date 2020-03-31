@@ -112,6 +112,8 @@
           { name: "description", property: "og:description", content: this.description, hid: "description" },
           { property: "og:title", content: this.pageTitle },
           { property: "og:image", content: this.imageRequired },
+          { property: "og:image:height" content: "630"},
+          { property: "og:image:width" content: "1200"},
           { name: "twitter:card", content: "summary_large_image"},
           { nmae: "twitter:site", content: "marcoslebron.com"},
           { name: "twitter:title", content: this.pageTitle },
@@ -142,7 +144,7 @@
         return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
       },
       imageRequired () {
-        return require(`../../assets/images/blog/${this.id}/_thumbnail.svg`)
+        return `${process.env.baseUrl}` + require(`../../assets/images/blog/${this.id}/_thumbnail.svg`)
       },
       hreflang () {
         if (!this.trans) {
