@@ -70,6 +70,7 @@
 
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
   import SocialShare from "~/components/SocialShare.vue"
+  import filter from "lodash/filter"
   export default {
 
     async asyncData ({params, app}) {
@@ -112,8 +113,8 @@
           { name: "description", property: "og:description", content: this.description, hid: "description" },
           { property: "og:title", content: this.pageTitle },
           { property: "og:image", content: this.imageRequired },
-          { property: "og:image:height" content: "630"},
-          { property: "og:image:width" content: "1200"},
+          { property: "og:image:height", content: "630"},
+          { property: "og:image:width", content: "1200"},
           { name: "twitter:card", content: "summary_large_image"},
           { nmae: "twitter:site", content: "marcoslebron.com"},
           { name: "twitter:title", content: this.pageTitle },
