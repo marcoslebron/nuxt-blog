@@ -62,6 +62,7 @@
         :url="urlPath"
         :title='title'
         :description='description' />
+      <ContentTable v-if="contentTable.length >1" :contentArray="contentTable"/>
     </div>
   </div>
 </template>
@@ -70,6 +71,8 @@
 
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
   import SocialShare from "~/components/SocialShare.vue"
+  import ContentTable from "~/components/ContentTable.vue"
+
   export default {
 
     async asyncData ({params, app}) {
@@ -88,6 +91,7 @@
         extraComponent: attr.extraComponent,
         renderFunc: `(${fileContent.vue.render})`,
         staticRenderFuncs: `[${fileContent.vue.staticRenderFns}]`,
+        contentTable: attr.contentTable? attr.contentTable : [],
         image: {
           main: attr.image && attr.image.main,
           og: attr.image && attr.image.og
@@ -99,7 +103,7 @@
       seo: false
     },
 
-    components: { DynamicMarkdown, SocialShare},
+    components: { DynamicMarkdown, SocialShare, ContentTable},
 
     head () {
       return {
