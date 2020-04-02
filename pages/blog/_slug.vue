@@ -63,6 +63,9 @@
         :title='title'
         :description='description' />
       <ContentTable v-if="contentTable.length >1" :contentArray="contentTable"/>
+      <div class="comments">
+        <vue-disqus shortname="lebronmarcos" :identifier="id" :url="urlPath"></vue-disqus>
+      </div>
     </div>
   </div>
 </template>
@@ -279,6 +282,7 @@
 
   li {
     list-style-type: initial;
+    margin-bottom: 5px;
   }
 
   pre {

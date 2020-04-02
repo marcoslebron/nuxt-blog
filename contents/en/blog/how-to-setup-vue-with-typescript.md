@@ -1,7 +1,7 @@
 ---
 name: 'how-to-setup-vue-with-typescript'
 trans: 'como-configurar-typescript-en-vuejs'
-title: How to setup vue with typescript
+title: How to setup Vue with TypeScript
 year: 26 Mar 2020
 updatedDate: 26 Mar 2020
 color: '#edece7'
@@ -12,7 +12,7 @@ noMainImage: false
 contentTable: [
   {name: 'TypeScript Overview', id: '#typescript-overview'},
   {name: 'Setting up Vuejs with TypeScript in new project setup', id: '#setting-up-vuejs-new'},
-  {name: 'Setting up Vuejs with TypeScript in an existing project setup', id: '#setting-up-vuejs)'},
+  {name: 'Setting up Vuejs with TypeScript in an existing project setup', id: '#setting-up-vuejs'},
   {name: 'Using TypeScript with single file components', id: '#using-typescript'},
   {name: 'Decorator $emit', id: '#decorator-emit'},
   {name: 'Decorator Watch', id: '#decorator-watch'},
@@ -23,7 +23,7 @@ contentTable: [
 # extraComponent: 'Datatable'
 id: 'how-to-setup-vue-with-typescript'
 description: |
-  How you may know already typescript is static typed superset that compiles plain JavaScript, in other words it allow us to use type checking in our code let see the benefits of this bellow.
+  How you may know already typescript is static typed superset that compiles plain JavaScript. In other words it allow us to use type checking in our code. Let see the benefits of this bellow.
 ---
 
 Table of content:
@@ -38,18 +38,20 @@ Table of content:
 * [Conclusion](#conclusion)
 
 ## <a href="#typescript-overview" name="typescript-overview">#</a> TypeScript Overview
-Typescript is a superset for JavaScript but What does this mean?, well it means that is like a piece of enhancement that you add to your projects and use it along with JavaScript you can read more about it [here](https://www.typescriptlang.org/docs/handbook/basic-types.html). You may be asking What benefits or advantages provide the use of typescript? here I list some of then:
+Typescript is a superset for JavaScript but What does this mean?, well it means that is like a piece of enhancement that you add to your project and use it along with JavaScript, you can read more about it [here](https://www.typescriptlang.org/docs/handbook/basic-types.html). 
+
+You may be asking What benefits or advantages will provide the use of typescript? well may friend here I list some of then.
 
 - Types are one of the best forms of documentation you can have.
 - Code scalability.
-- A Community that is supported by Microsoft it selft.
+- A Community that is supported by Microsoft it self.
 - Type help to code quality in big teams
 - Better understanding of the code.
-- Easier to test and debugg, It’s better for the compiler to catch errors than to have things fail at runtime.
+- Easier to test and debug, It’s better for the compiler to catch errors than to have things fail at runtime.
 - Code completion and IntelliSense. Intellisense provides active hints as a code is added.
 
 ## <a href="#setting-up-vuejs-new" name="setting-up-vuejs-new">#</a> Setting up Vuejs with TypeScript in new project setup
-Lets begin by open our Terminal, write the following command (just in case you dont have vue CLI in your machine, you can skip it if you do):
+Lets begin by open our Terminal, write the following command (just in case you don’t have vue CLI in your machine, you can skip it if you do):
 
 ` npm install --global @vue/cli`
 
@@ -75,8 +77,8 @@ Before we go beyond let me explain something about the files created in the proj
 
 `shims-tsx.d.ts` allow you to enable JSX-Style typescript code in those files.
 
-`tsconfig.json` in the root of the project where the config of TypeScript is the folder with ts files the types 
-of files to use with TypeScript, ES Module Version to use it also specifies the root files and the compiler options required to compile the project. Read more about it 
+`tsconfig.json` in the root of the project is  where the config of TypeScript, which is the folder with ts files, the types 
+of files to use with TypeScript, ES Module Version to use, it also specifies the root files and the compiler options required to compile the project. Read more about it 
 [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
 ## <a href="#setting-up-vuejs" name="setting-up-vuejs">#</a> Setting up Vuejs with TypeScript in an existing project setup
@@ -93,11 +95,11 @@ First create `tsconfig.json` file in the root of your project and add this code 
   }
 }
 ```
-Second you need to add `ts-loader` to your application I'm summing you are using webpack as bundler:
+Second you need to add `ts-loader` to your application, I'm assuming you are using webpack as bundler:
 ```bash
 yarn add -s --dev ts-loader
 ```
-Now lets update `webpack.config.dev.js` file, we need to add the new rule before the vue loader for otheur ts-loader to work
+Now lets update `webpack.config.dev.js` file, we need to add the new rule before the vue loader for other ts-loader to work
 
 ```javascript 
 rules: [
@@ -111,7 +113,7 @@ rules: [
   },
   ...
 ```
-you nedd to rename your main entry file extention to `.ts`:
+you need to rename your main entry file extension to `.ts`:
 
 ```javascript
 ...
@@ -120,16 +122,16 @@ entry: {
 },
 ...
 ```
-You are now ready to use TypeScript within your project change the extention of any `.js` to `.ts` and inside the components you want to use TypeScript use the `lang="ts"` on the `script` tag of your Vue file. 
+You are now ready to use TypeScript within your project change the extension of any `.js` to `.ts` and inside the components  you can now use TypeScript, add the `lang="ts"` on the `script` tag of your Vue file. 
 
 ```javascript
 <script lang="ts">
 ```
 
-So now lets begin by writing a single file component
+So now lets begin by writing a single file component. Ohh! yeah baby!!! 
 
 ## <a href="#using-typescript" name="using-typescript">#</a> Using TypeScript with single file components
-Let begin by adding by defining our vue class component structure using the `vue-property-decorator` & `vue-class` packages if your project is not new vue-cli add this packages by default if you select TypeScript configuration
+Let's begin by defining our vue class component structure using the `vue-property-decorator` & `vue-class-component` packages if your project is not new vue-cli add this packages by default, if you select TypeScript configuration at the beginning
 
 ```javascript
 <template>
@@ -182,11 +184,11 @@ export default class LayoutComponent extends Vue {
 }
 </script>
 ```
-As you can see this is how you create a single file component with TypeScript data properties can be attributes of the class, computed properties work as simple getters read more about this [getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get), hooks methods are written in the class as methods.
+As you can see this is how you create a single file component with TypeScript, data properties can be attributes of the class, computed properties work as simple getters read more about this [getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get), hooks methods are written in the class as methods.
 
 
 ## <a href="#decorator-emit" name="decorator-emit">#</a> Decorator for $emit
-Here a good exampla of the `@Emit()` decorator:
+Here a good example of the `@Emit()` decorator:
 ```javascript
 import {Component, Vue, Prop, Emit} from "vue-property-decorator"
 
@@ -197,7 +199,7 @@ export default class Sidebar extends Vue {
   }
 }
 ```
-then on the parent components:
+then in the parent components:
 
 ```javascript
 <template>
@@ -209,7 +211,7 @@ then on the parent components:
 
 ```
 ## <a href="#decorator-watch" name="decorator-watch">#</a>Decorator for watch:{} object
-Here a good exampla of the `@Watch()` decorator:
+Here a good example of the `@Watch()` decorator:
 
 ```javascript
 <script lang="ts">
@@ -229,7 +231,8 @@ Here a good exampla of the `@Watch()` decorator:
   .
 ```
 ## <a href="#mixins-vue-class" name="mixins-vue-class" >#</a>Mixins in vue class components
-Ok now, lets talk about mixins, I had a hard time dealing with this when I first started working with Typescript in vuejs. But it doest have to be that hard you would say... But if you don't know if like your trying to play a guessing game.
+Ok now, let's talk about mixins, I had a hard time dealing with this when I first started working with Typescript in vuejs. But it doest have to be that hard you would say... But if you don't know is like you're trying to play a guessing game.
+
 Let see how we can overcome this:
 
 First the mixing only containing `<script lang="ts"></script>` tag:
@@ -262,7 +265,7 @@ export default class CartItem extends mixins(CheckoutMixin) {
   ...
 }
 ```
-To know more in deeps how this works under the hood i advise you to go the TypeScript docs about inheritance
+To know more in deeps how this works under the hood I advise you to read the TypeScript docs about inheritance
 [inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance)
 
 ## <a href="#important-notes" name="important-notes">#</a>Important notes
@@ -282,8 +285,10 @@ shims-vue.d.ts
 Allows .vue single file components to be imported and used.
 
 ## <a href="#conclusion" name="conclusion">#</a>Conclusions
-In conclusion we have learned to add typescript to an existing project with webpack. How to init a new project with TypeScript using the vue cli wizard. You saw the structure of a vue class component and its decorators methods. 
+We have learned to add TypeScript to an existing project with webpack. How to init a new project with TypeScript using the vue cli wizard. You saw the structure of a vue class component and its decorators methods. 
 
-The main point of having typescript enable in your app is to use types in your classes, objects & functions so when a bug emerge will be easier for you to detect the couse of the problem.
+The main point of having typescript enable in your app is to use types in your classes, objects & functions so when a bug emerge will be easier for you to detect the cause of the problem.
 
-That’s all for this part, if you enjoyed this article dont forget to follow me on twitter and subscribe to the newsletter to get weekly articles update right in your inbox. Thanks for reading!
+That’s all for this part, if you enjoyed this article don’t forget to follow me on twitter and subscribe to the newsletter to get weekly articles updates right in your inbox. 
+
+Thanks for reading!

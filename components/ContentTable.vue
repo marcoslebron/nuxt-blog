@@ -42,27 +42,25 @@ export default {
       open: true
     }
   },
-  // watch:{
-  //   'window.innerWidth': function (val) {
-  //     console.log(val)
-  //     if (val < 768) {
-  //       this.open = false
-  //     }
-  //   }
-  // },
   computed:{
     showText() {
       return this.open ? 'Close' : 'Open'
     }
   },
-  // mounted(){
-  //   window.addEventListener("innerWidth", this.handleResize)
-  // },
-  // methods:{
-  //   handleResize(e) {
-  //     console.log(e)
-  //   }
-  // }
+  mounted(){
+    window.addEventListener("resize", this.handleResize)
+    this.handleResize()
+  },
+  destroyed(){
+    window.removeEventListener("resize", this.handleResize)
+  },
+  methods:{
+    handleResize() {
+      if(window.innerWidth < 575){
+        this.open = false
+      }
+    }
+  }
 }
 </script>
 
@@ -74,7 +72,7 @@ export default {
     position: fixed;
     left: -213px;
     font-size: 12px;
-    top: 50px;
+    top: 87px;
     max-width: 220px;
     border: 1px solid #deecff;
     background-color: white;
@@ -97,6 +95,7 @@ export default {
       }
       p {
         margin-bottom: 5px;
+        font-weight: 600;
       }
     }
     @media (max-width: $screen-sm){
