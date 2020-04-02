@@ -58,6 +58,14 @@
           :static-render-funcs="staticRenderFuncs"
           :extra-component="extraComponent" />
       </client-only>
+      <social-share 
+        :url="urlPath"
+        :title='title'
+        :description='description' />
+      <ContentTable v-if="contentTable.length >1" :contentArray="contentTable"/>
+      <div class="comments">
+        <vue-disqus shortname="lebronmarcos" :identifier="id" :url="urlPath"></vue-disqus>
+      </div>
     </div>
   </div>
 </template>
@@ -65,6 +73,8 @@
 <script lang="js">
 
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
+  import SocialShare from "~/components/SocialShare.vue"
+  import ContentTable from "~/components/ContentTable.vue"
 
   export default {
 
@@ -84,6 +94,7 @@
         extraComponent: attr.extraComponent,
         renderFunc: `(${fileContent.vue.render})`,
         staticRenderFuncs: `[${fileContent.vue.staticRenderFns}]`,
+        contentTable: attr.contentTable? attr.contentTable : [],
         image: {
           main: attr.image && attr.image.main,
           og: attr.image && attr.image.og
@@ -95,7 +106,7 @@
       seo: false
     },
 
-    components: { DynamicMarkdown},
+    components: { DynamicMarkdown, SocialShare, ContentTable},
 
     head () {
       return {
@@ -107,9 +118,14 @@
           { name: "author", content: "Marcos Lebron" },
           { name: "description", property: "og:description", content: this.description, hid: "description" },
           { property: "og:title", content: this.pageTitle },
-          { property: "og:image", content: this.ogImage },
+          { property: "og:image", content: this.imageRequired },
+          { property: "og:image:height", content: "630"},
+          { property: "og:image:width", content: "1200"},
+          { name: "twitter:card", content: "summary_large_image"},
+          { nmae: "twitter:site", content: "marcoslebron.com"},
+          { name: "twitter:title", content: this.pageTitle },
           { name: "twitter:description", content: this.description },
-          { name: "twitter:image", content: this.ogImage }
+          { name: "twitter:image", content: this.imageRequired }
         ],
         link: [
           this.hreflang
@@ -123,13 +139,19 @@
 
     computed: {
       ogImage () {
-        return `${process.env.baseUrl}/images/blog/${this.id}/_thumbnail.jpg`;
+        return `${process.env.baseUrl}/images/blog/${this.id}/_thumbnail.svg`;
+      },
+      urlPath () {
+        return `${process.env.baseUrl}${this.$route.fullPath}`
       },
       pageTitle () {
         return this.title + ' – Marcos Lebron';
       },
       showLocales () {
         return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
+      },
+      imageRequired () {
+        return `${process.env.baseUrl}` + require(`../../assets/images/blog/${this.id}/_thumbnail.png`)
       },
       hreflang () {
         if (!this.trans) {
@@ -260,6 +282,7 @@
 
   li {
     list-style-type: initial;
+    margin-bottom: 5px;
   }
 
   pre {

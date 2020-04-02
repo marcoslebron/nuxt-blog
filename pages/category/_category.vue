@@ -11,7 +11,7 @@
 
   import blogsEn from '~/contents/en/blogsEn.js'
   import blogsEs from '~/contents/es/blogsEs.js'
-  import {filter} from "lodash"
+  import filter from "lodash/filter"
 
   export default {
     async asyncData ({params, app}) {

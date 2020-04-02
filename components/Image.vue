@@ -56,6 +56,7 @@ export default {
 
 .image-placeholder {
   overflow: hidden;
+  text-align: center;
   line-height: 0;
 
   &--rounded {

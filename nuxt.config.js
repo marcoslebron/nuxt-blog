@@ -42,7 +42,6 @@ module.exports = {
       { name: 'robots', content: 'index, follow' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@@lebronmarcos' },
-      { property: 'og:type', content: 'profile' },
       { property: 'og:updated_time', content: builtAt }
     ],
     link: [
@@ -115,7 +114,7 @@ module.exports = {
       });
     }
   },
-  plugins: ['~/plugins/lazyload', '~/plugins/vue-typed-js', '~/plugins/globalComponents', { src: '~plugins/ga.js', mode: 'client', ssr: false }],
+  plugins: ['~/plugins/lazyload', '~/plugins/vue-typed-js', '~/plugins/disqus', '~/plugins/globalComponents', { src: '~plugins/ga.js', mode: 'client', ssr: false }],
   modules: [  
     '@nuxtjs/style-resources',
     ['nuxt-i18n', I18N],
