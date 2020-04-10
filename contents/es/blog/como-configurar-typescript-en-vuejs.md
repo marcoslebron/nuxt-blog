@@ -10,15 +10,15 @@ cardAlt: 'Article on how to setup typescript in vuejs'
 isTextColorDark: true
 noMainImage: false
 contentTable: [
-  {name: 'TypeScript Overview', id: '#typescript-overview'},
-  {name: 'Setting up Vuejs with TypeScript in new project setup', id: '#setting-up-vuejs-new'},
-  {name: 'Setting up Vuejs with TypeScript in an existing project setup', id: '#setting-up-vuejs'},
-  {name: 'Using TypeScript with single file components', id: '#using-typescript'},
-  {name: 'Decorator $emit', id: '#decorator-emit'},
-  {name: 'Decorator Watch', id: '#decorator-watch'},
-  {name: 'Mixins in vue class components', id: '#mixins-vue-class'},
-  {name: 'Important Notes', id: '#important-notes'},
-  {name: 'Conclusion', id: '#conclusion'}
+  {name: 'Descripción general de TypeScript', id: '#typescript-overview'},
+  {name: 'Configuración de Vuejs con TypeScript en un nuevo proyecto', id: '#setting-up-vuejs-new'},
+  {name: 'Configuración de Vuejs con TypeScript en una configuración de proyecto existente', id: '#setting-up-vuejs'},
+  {name: 'Uso de TypeScript con componentes de archivo único', id: '#using-typescript'},
+  {name: 'Decorador $emit', id: '#decorator-emit'},
+  {name: 'Decorador Watch', id: '#decorator-watch'},
+  {name: 'Mixins en componentes tipo clases', id: '#mixins-vue-class'},
+  {name: 'Notas Importantes', id: '#important-notes'},
+  {name: 'Conclusiones', id: '#conclusion'}
 ]
 # extraComponent: 'Datatable'
 id: 'how-to-setup-vue-with-typescript'
@@ -31,11 +31,11 @@ Tabla de contenidos:
 * [Configuración de Vuejs con TypeScript en un nuevo proyecto](#setting-up-vuejs-new)
 * [Configuración de Vuejs con TypeScript en una configuración de proyecto existente](#setting-up-vuejs)
 * [Uso de TypeScript con componentes de archivo único](#using-typescript)
-* [Decorator $ emit](#decorator-emit)
-* [Reloj decorador](#reloj decorador)
+* [Decorador $emit](#decorator-emit)
+* [Decorador @Watch](#decorator-watch)
 * [Mixins en componentes de clase vue](#mixins-vue-class)
-* [Notas importantes](#notas-importantes)
-* [Conclusión](#conclusion)
+* [Notas importantes](#important-notes)
+* [Conclusiones](#conclusion)
 
 ## <a href="#typescript-overview" name="typescript-overview">#</a> Descripción General de TypeScript
 El TypeScript es un superconjunto para JavaScript, pero ¿qué significa esto? Bueno, significa que es como una mejora que agrega a su proyecto y lo usa junto con JavaScript, puedes [leer más sobre esto aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html). 
