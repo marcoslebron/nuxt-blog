@@ -103,7 +103,7 @@
     },
 
     nuxtI18n: {
-      seo: false
+      seo: true
     },
 
     components: { DynamicMarkdown, SocialShare, ContentTable},

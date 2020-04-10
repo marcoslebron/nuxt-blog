@@ -1,7 +1,7 @@
 ---
 name: 'como-configurar-typescript-en-vuejs'
 trans: 'how-to-setup-vue-with-typescript'
-title: How to setup Vue with TypeScript
+title: Como configurar TypeScript en vuejs
 year: 26 Mar 2020
 updatedDate: 26 Mar 2020
 color: '#edece7'
@@ -23,7 +23,7 @@ contentTable: [
 # extraComponent: 'Datatable'
 id: 'how-to-setup-vue-with-typescript'
 description: |
-Como ya sabrás, el mecanografiado es un superconjunto de tipo estático que compila JavaScript simple. En otras palabras, nos permite utilizar la verificación de tipos en nuestro código. Veamos los beneficios de este bramido.
+  Como ya sabrás, el mecanografiado es un superconjunto de tipo estático que compila JavaScript simple. En otras palabras, nos permite utilizar la verificación de tipos en nuestro código. Veamos los beneficios de este bramido.
 ---
 
 Tabla de contenidos:
