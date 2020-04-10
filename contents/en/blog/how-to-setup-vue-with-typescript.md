@@ -38,9 +38,9 @@ Table of content:
 * [Conclusion](#conclusion)
 
 ## <a href="#typescript-overview" name="typescript-overview">#</a> TypeScript Overview
-Typescript is a superset for JavaScript but What does this mean?, well it means that is like a piece of enhancement that you add to your project and use it along with JavaScript, you can read more about it [here](https://www.typescriptlang.org/docs/handbook/basic-types.html). 
+Typescript is a superset for JavaScript but What does this mean?, well it means that is like a piece of enhancement that you add to your project and use it along with JavaScript, you can [read more about it here](https://www.typescriptlang.org/docs/handbook/basic-types.html). 
 
-You may be asking What benefits or advantages will provide the use of typescript? well may friend here I list some of then.
+You may be asking What benefits or advantages will provide the use of typescript? well my friend here I list some of then.
 
 - Types are one of the best forms of documentation you can have.
 - Code scalability.
@@ -51,7 +51,7 @@ You may be asking What benefits or advantages will provide the use of typescript
 - Code completion and IntelliSense. Intellisense provides active hints as a code is added.
 
 ## <a href="#setting-up-vuejs-new" name="setting-up-vuejs-new">#</a> Setting up Vuejs with TypeScript in new project setup
-Lets begin by open our Terminal, write the following command (just in case you don’t have vue CLI in your machine, you can skip it if you do):
+Let's begin by open our Terminal, write the following command (just in case you don’t have vue CLI in your machine, you can skip it if you do):
 
 ` npm install --global @vue/cli`
 
@@ -59,7 +59,7 @@ after this command finish executing write the following command command
 
 ` vue create [your-app-name]`
 
-Here you will be prompt with a step wizard in the command line,  select the first two options [babel and typescript] mark then with the space bar then hit enter to continue, leave all the rest with the default options, let it finish. Easy right? now enter the folder created with the name of your project and run the server
+Here you will be prompt with a step wizard in the command line,  select the first two options [babel and typescript] mark them with the space bar then hit enter to continue, leave all the rest with the default options, let it finish. Easy right? Now enter the folder created with the name of your project and run the server
 
 `cd [your-app-name]`
 
@@ -128,7 +128,7 @@ You are now ready to use TypeScript within your project change the extension of 
 <script lang="ts">
 ```
 
-So now lets begin by writing a single file component. Ohh! yeah baby!!! 
+So now let's begin by writing a single file component. Ohh! yeah baby!!! 
 
 ## <a href="#using-typescript" name="using-typescript">#</a> Using TypeScript with single file components
 Let's begin by defining our vue class component structure using the `vue-property-decorator` & `vue-class-component` packages if your project is not new vue-cli add this packages by default, if you select TypeScript configuration at the beginning
@@ -184,7 +184,7 @@ export default class LayoutComponent extends Vue {
 }
 </script>
 ```
-As you can see this is how you create a single file component with TypeScript, data properties can be attributes of the class, computed properties work as simple getters read more about this [getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get), hooks methods are written in the class as methods.
+As you can see this is how you create a single file component with TypeScript, data properties can be attributes of the class, computed properties work as simple getters [read more about this getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get), hooks methods are written in the class as methods.
 
 
 ## <a href="#decorator-emit" name="decorator-emit">#</a> Decorator for $emit
@@ -199,7 +199,7 @@ export default class Sidebar extends Vue {
   }
 }
 ```
-then in the parent components:
+Then in the parent components:
 
 ```javascript
 <template>
@@ -231,7 +231,7 @@ Here a good example of the `@Watch()` decorator:
   .
 ```
 ## <a href="#mixins-vue-class" name="mixins-vue-class" >#</a>Mixins in vue class components
-Ok now, let's talk about mixins, I had a hard time dealing with this when I first started working with Typescript in vuejs. But it doest have to be that hard you would say... But if you don't know is like you're trying to play a guessing game.
+Ok now, let's talk about mixins, I had a hard time dealing with this when I first started working with Typescript in vuejs. But it doesn't have to be that hard you would say... But if you don't know is like you're trying to play a guessing game.
 
 Let see how we can overcome this:
 

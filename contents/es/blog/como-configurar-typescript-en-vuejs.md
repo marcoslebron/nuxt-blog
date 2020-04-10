@@ -23,66 +23,67 @@ contentTable: [
 # extraComponent: 'Datatable'
 id: 'how-to-setup-vue-with-typescript'
 description: |
-  How you may know already typescript is static typed superset that compiles plain JavaScript. In other words it allow us to use type checking in our code. Let see the benefits of this bellow.
+Como ya sabrás, el mecanografiado es un superconjunto de tipo estático que compila JavaScript simple. En otras palabras, nos permite utilizar la verificación de tipos en nuestro código. Veamos los beneficios de este bramido.
 ---
 
-Table of content:
-* [TypeScript Overview](#typescript-overview)  
-* [Setting up Vuejs with TypeScript in new project setup](#setting-up-vuejs-new)
-* [Setting up Vuejs with TypeScript in an existing project setup](#setting-up-vuejs) 
-* [Using TypeScript with single file components](#using-typescript)
-* [Decorator $emit](#decorator-emit)
-* [Decorator Watch](#decorator-watch)
-* [Mixins in vue class components](#mixins-vue-class)
-* [Important Notes](#important-notes)
-* [Conclusion](#conclusion)
+Tabla de contenidos:
+* [Descripción general de TypeScript](#typescript-overview)
+* [Configuración de Vuejs con TypeScript en un nuevo proyecto](#setting-up-vuejs-new)
+* [Configuración de Vuejs con TypeScript en una configuración de proyecto existente](#setting-up-vuejs)
+* [Uso de TypeScript con componentes de archivo único](#using-typescript)
+* [Decorator $ emit](#decorator-emit)
+* [Reloj decorador](#reloj decorador)
+* [Mixins en componentes de clase vue](#mixins-vue-class)
+* [Notas importantes](#notas-importantes)
+* [Conclusión](#conclusion)
 
-## <a href="#typescript-overview" name="typescript-overview">#</a> TypeScript Overview
-Typescript is a superset for JavaScript but What does this mean?, well it means that is like a piece of enhancement that you add to your project and use it along with JavaScript, you can read more about it [here](https://www.typescriptlang.org/docs/handbook/basic-types.html). 
+## <a href="#typescript-overview" name="typescript-overview">#</a> Descripción General de TypeScript
+El TypeScript es un superconjunto para JavaScript, pero ¿qué significa esto? Bueno, significa que es como una mejora que agrega a su proyecto y lo usa junto con JavaScript, puedes [leer más sobre esto aquí](https://www.typescriptlang.org/docs/handbook/basic-types.html). 
 
-You may be asking What benefits or advantages will provide the use of typescript? well may friend here I list some of then.
+Quizás se pregunte ¿Qué beneficios o ventajas proporcionará el uso de TypeScript? pues aquí enumero algunos.
 
-- Types are one of the best forms of documentation you can have.
-- Code scalability.
-- A Community that is supported by Microsoft it self.
-- Type help to code quality in big teams
-- Better understanding of the code.
-- Easier to test and debug, It’s better for the compiler to catch errors than to have things fail at runtime.
-- Code completion and IntelliSense. Intellisense provides active hints as a code is added.
+- Los tipos son una de las mejores formas de documentación que puede tener.
+- Escalabilidad de código.
+- Una comunidad que es apadrinada por Microsoft.
+- Mejor comprensión del código.
+- Más fácil de probar y depurar, es mejor para el compilador detectar errores que hacer que las cosas fallen en tiempo de ejecución.
+- Finalización de código e IntelliSense. Intellisense proporciona sugerencias activas a medida que se agrega un código
 
-## <a href="#setting-up-vuejs-new" name="setting-up-vuejs-new">#</a> Setting up Vuejs with TypeScript in new project setup
-Lets begin by open our Terminal, write the following command (just in case you don’t have vue CLI in your machine, you can skip it if you do):
+## <a href="#setting-up-vuejs-new" name="setting-up-vuejs-new">#</a> Configuración de Vuejs con TypeScript en un nuevo proyecto
+Comencemos por abrir la Terminal, escriba el siguiente comando (en caso de que no tenga vue CLI en su máquina, puede omitirlo si lo tiene):
 
 ` npm install --global @vue/cli`
 
-after this command finish executing write the following command command
+después de que este comando termine de ejecutarse, escriba el siguiente comando
 
 ` vue create [your-app-name]`
 
-Here you will be prompt with a step wizard in the command line,  select the first two options [babel and typescript] mark then with the space bar then hit enter to continue, leave all the rest with the default options, let it finish. Easy right? now enter the folder created with the name of your project and run the server
+Aquí se le solicitará un asistente de pasos en la línea de comando, seleccione las dos primeras opciones [babel y mecanografiado] márquelas con la barra espaciadora y luego presione Intro para continuar, deje todo el resto con las opciones predeterminadas, déjelo terminar. Fácil verdad? 
+Ahora ingrese la carpeta creada con el nombre de su proyecto y ejecute el servidor
 
 `cd [your-app-name]`
 
-then
+luego
 
 `yarn dev`
 
 <image-responsive imageURL="blog/how-to-setup-vue-with-typescript/vue-typescript.png" width="60%" alt="Photo of webpage with vue server up"/>
 
-Now you should get server running in the port localhost:8081 or :8080
+Ahora debería hacer que el servidor se ejecute en el puerto localhost: 8081 o: 8080
 
-Before we go beyond let me explain something about the files created in the project, you will see some files related to TypeScript config inside the src folder you will find a `shims-vue.d.ts` which helps your IDE to understand what a file ending in .vue is. 
+Antes de ir más allá, permítame explicar algo sobre los archivos creados en el proyecto, verá algunos archivos relacionados con la configuración de TypeScript dentro de la carpeta src, encontrará un `shims-vue.d.ts` que ayuda a su IDE a comprender qué el archivo que termina en `.vue` es.
 
 <image-responsive imageURL="blog/how-to-setup-vue-with-typescript/files-ts.png" width="25%" alt="Photo of the files of vue typescript generated"/>
 
-`shims-tsx.d.ts` allow you to enable JSX-Style typescript code in those files.
+`shims-tsx.d.ts` le permite habilitar el código de mecanografía JSX-Style en esos archivos.
 
-`tsconfig.json` in the root of the project is  where the config of TypeScript, which is the folder with ts files, the types 
-of files to use with TypeScript, ES Module Version to use, it also specifies the root files and the compiler options required to compile the project. Read more about it 
-[here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+`tsconfig.json` en la raíz del proyecto es donde la configuración de TypeScript, que es la carpeta con archivos ts, los tipos
+de archivos para usar con TypeScript, Versión del módulo ES para usar, también especifica los archivos raíz y las opciones de compilación necesarias para compilar el proyecto. [Lea más sobre esto aquí](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
 ## <a href="#setting-up-vuejs" name="setting-up-vuejs">#</a> Setting up Vuejs with TypeScript in an existing project setup
-First create `tsconfig.json` file in the root of your project and add this code snippet 
+
+Primero cree el archivo `tsconfig.json` en la raíz de su proyecto y agregue este fragmento de código
+
 ```json
 {
   "compilerOptions": {
@@ -95,11 +96,14 @@ First create `tsconfig.json` file in the root of your project and add this code 
   }
 }
 ```
-Second you need to add `ts-loader` to your application, I'm assuming you are using webpack as bundler:
+
+En segundo lugar, debe agregar `ts-loader` a su aplicación, supongo que está usando webpack como paquete:
+
 ```bash
 yarn add -s --dev ts-loader
 ```
-Now lets update `webpack.config.dev.js` file, we need to add the new rule before the vue loader for other ts-loader to work
+
+Ahora vamos a actualizar el archivo `webpack.config.dev.js`, necesitamos agregar la nueva regla antes del vue loader para que funcione otro ts-loader
 
 ```javascript 
 rules: [
@@ -113,7 +117,8 @@ rules: [
   },
   ...
 ```
-you need to rename your main entry file extension to `.ts`:
+
+Necesitas cambiar la extensión del archivo de entrada principal a `.ts`:
 
 ```javascript
 ...
@@ -122,16 +127,17 @@ entry: {
 },
 ...
 ```
-You are now ready to use TypeScript within your project change the extension of any `.js` to `.ts` and inside the components  you can now use TypeScript, add the `lang="ts"` on the `script` tag of your Vue file. 
+
+Ahora está listo para usar TypeScript dentro de su proyecto, cambie la extensión de cualquier `.js` a` .ts` y dentro de los componentes ahora puede usar TypeScript, agregue `lang =" ts "` en la etiqueta `script` de tu archivo Vue.
 
 ```javascript
 <script lang="ts">
 ```
 
-So now lets begin by writing a single file component. Ohh! yeah baby!!! 
+Así que ahora comencemos escribiendo un solo componente de archivo. Ohh! ¡¡¡sí bebé!!!
 
-## <a href="#using-typescript" name="using-typescript">#</a> Using TypeScript with single file components
-Let's begin by defining our vue class component structure using the `vue-property-decorator` & `vue-class-component` packages if your project is not new vue-cli add this packages by default, if you select TypeScript configuration at the beginning
+## <a href="#using-typescript" name="using-typescript">#</a> Usar TypeScript con componentes de un solo archivo
+Comencemos definiendo nuestra estructura de componentes de clase vue usando los paquetes `vue-property-decorator` &` vue-class-component` si su proyecto no es nuevo vue-cli agregue estos paquetes por defecto, si selecciona la configuración TypeScript al principio
 
 ```javascript
 <template>
@@ -184,22 +190,23 @@ export default class LayoutComponent extends Vue {
 }
 </script>
 ```
-As you can see this is how you create a single file component with TypeScript, data properties can be attributes of the class, computed properties work as simple getters read more about this [getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get), hooks methods are written in the class as methods.
+Como puede ver, así es como se crea un único componente de archivo con TypeScript, las propiedades de los datos pueden ser atributos de la clase, las propiedades calculadas funcionan como captadores simples [lea más sobre estos captadores](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get), los métodos de ganchos se escriben en la clase como métodos.
 
+## <a href="#decorator-emit" name="decorator-emit">#</a> Decorador $emit
+Aquí un buen ejemplo del decorador `@Emit ()`:
 
-## <a href="#decorator-emit" name="decorator-emit">#</a> Decorator for $emit
-Here a good example of the `@Emit()` decorator:
 ```javascript
 import {Component, Vue, Prop, Emit} from "vue-property-decorator"
 
 export default class Sidebar extends Vue {
-  @Emit('onClickedLink')// if not parameter set the name of the below method will be used instead
+  @Emit('onClickedLink')// de lo contrario, se utilizará el nombre del método debajo.
   onClick(value: string) {
     return value;
   }
 }
 ```
-then in the parent components:
+
+luego en los componentes principales:
 
 ```javascript
 <template>
@@ -210,8 +217,8 @@ then in the parent components:
   .
 
 ```
-## <a href="#decorator-watch" name="decorator-watch">#</a>Decorator for watch:{} object
-Here a good example of the `@Watch()` decorator:
+## <a href="#decorator-watch" name="decorator-watch">#</a> Decorador watch:{} 
+Aquí un buen ejemplo del decorador `@Watch ()`:
 
 ```javascript
 <script lang="ts">
@@ -230,12 +237,14 @@ Here a good example of the `@Watch()` decorator:
   ..
   .
 ```
-## <a href="#mixins-vue-class" name="mixins-vue-class" >#</a>Mixins in vue class components
-Ok now, let's talk about mixins, I had a hard time dealing with this when I first started working with Typescript in vuejs. But it doest have to be that hard you would say... But if you don't know is like you're trying to play a guessing game.
+## <a href="#mixins-vue-class" name="mixins-vue-class" >#</a> Mixins en componentes de clase vue
 
-Let see how we can overcome this:
+Ok ahora, hablemos de mixins, tuve dificultades para lidiar con esto cuando comencé a trabajar con Typecript en vuejs. Pero no tiene que ser tan difícil como dirías ... Pero si no lo sabes, es como si estuvieras intentando jugar un juego de adivinanzas.
 
-First the mixing only containing `<script lang="ts"></script>` tag:
+Veamos cómo podemos superar esto:
+
+Primero, la mezcla solo contiene la etiqueta `<script lang =" ts "> </script>`:
+
 ```javascript
 import { Component, Vue, Prop } from "vue-property-decorator";
 
@@ -249,7 +258,7 @@ export default class Checkout extends Vue {
 }
 ```
 
-then the component you wish to use the mixin:
+Luego en el component importamos el mixins:
 
 ```javascript
 <script lang="ts">
@@ -261,34 +270,34 @@ then the component you wish to use the mixin:
   name: "CartItem"
 })
 export default class CartItem extends mixins(CheckoutMixin) {
-  //all methods and attributes will be available in this class now
+  //Todos los métodos y atributos estarán disponibles en esta clase ahora
   ...
 }
 ```
-To know more in deeps how this works under the hood I advise you to read the TypeScript docs about inheritance
-[inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance)
+Para saber más en profundidad cómo funciona esto, le aconsejo que lea los documentos de TypeScript sobre herencia
+[herencia](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance)
 
-## <a href="#important-notes" name="important-notes">#</a>Important notes
+## <a href="#important-notes" name="important-notes">#</a>Notas Importantes
 tsconfig.json
-Contains compiler options and specifies the location of root files.
+Contiene opciones de compilador y especifica la ubicación de los archivos raíz.
 
 tslint.json
-Options and rules for Typescript linting, for TSlint.
+Opciones y reglas para la alineación mecanografiada, para TSlint.
 
 app.ts
-The entry file for the project.
+El archivo de entrada para el proyecto.
 
 shims-tsx.d.ts
-Allows the use of .tsx files. Read more about this here.
+Permite el uso de archivos .tsx. Lea más sobre esto aquí.
 
 shims-vue.d.ts
-Allows .vue single file components to be imported and used.
+Permite importar y usar componentes de un solo archivo .vue.
 
-## <a href="#conclusion" name="conclusion">#</a>Conclusions
-We have learned to add TypeScript to an existing project with webpack. How to init a new project with TypeScript using the vue cli wizard. You saw the structure of a vue class component and its decorators methods. 
+## <a href="#conclusion" name="conclusion">#</a>Conclusiones
+Hemos aprendido a agregar TypeScript a un proyecto existente con webpack. Cómo iniciar un nuevo proyecto con TypeScript utilizando el asistente vue cli. Viste la estructura de un componente de clase vue y sus métodos decoradores.
 
-The main point of having typescript enable in your app is to use types in your classes, objects & functions so when a bug emerge will be easier for you to detect the cause of the problem.
+El punto principal de habilitar el mecanografiado en su aplicación es usar los tipos en sus clases, objetos y funciones para que cuando surja un error le sea más fácil detectar la causa del problema.
 
-That’s all for this part, if you enjoyed this article don’t forget to follow me on twitter and subscribe to the newsletter to get weekly articles updates right in your inbox. 
+Eso es todo por esta parte, si disfrutaste este artículo, no olvides seguirme en Twitter y suscribirte al boletín para recibir actualizaciones semanales de artículos directamente en tu bandeja de entrada.
 
-Thanks for reading!
+¡Gracias por leer!
