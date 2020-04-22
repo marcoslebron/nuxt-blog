@@ -1,7 +1,7 @@
 ---
 name: 'vue-async-components'
 trans: 'componentes-asincronos-vue'
-title: Vue Async Components
+title: Example of Async Components in Vuejs
 year: 9 Apr 2020
 updatedDate: 9 Apr 2020
 color: '#edece7'
@@ -15,7 +15,7 @@ description: |
   When you have large applications it is necessary to optimize our code base so that it divides our code into parts and these parts are required when the browser needs them.
 ---
 
-## Utilizando componentes asíncronos en vuejs
+## Making use of async components in vuejs
 
 When you have large applications it is necessary to optimize our code base so that it divides our code into parts and these parts are required when the browser needs them. 
 What vue does in this case is to keep a copy of the component in cache and use it as many times as necessary from this source, thus maintaining the previous state of the component.
@@ -73,6 +73,8 @@ export default class LayoutComponent extends Vue {
 ```
 
 But keep in mind that to use this import method you must be using webpack and ES6 only this way we can make use of it.
+
+Other pattern when implementing vue components is the dynamic pattern you can read the article here <nuxt-link to="/blog/vue-dynamic-components">You can read it here</nuxt-link>
 
 Thank you for reading! If you have any questions about the subject, leave your comment with pleasure, I will answer you.
 

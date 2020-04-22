@@ -2,8 +2,8 @@
   <section>
     <div class="blogs__top">
       <div>
-        <h2>{{ $t('posts') }}</h2>
-        <span class="emoji-title emoji--writing"/>
+        <!-- <h2>{{ $t('posts') }}</h2> -->
+        <!-- <span class="emoji-title emoji--writing"/> -->
       </div>
     </div>
     <ul class="blogs">

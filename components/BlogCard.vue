@@ -11,12 +11,12 @@
       </div>
       <meta itemprop="mainEntityOfPage" content="www.marcoslebron.com">
       <meta itemprop="dateModified" :content="blog.updatedDate">
-      <ImageResponsive
+      <!-- <ImageResponsive
         :imageURL="`blog/${blog.id}/_thumbnail.svg`"
         :classes="'cardThumbnail'"
         :width="'952'"
         :height="'509'"
-        :alt="blog.cardAlt" />
+        :alt="blog.cardAlt" /> -->
       <h3 itemprop="name" class="blog__title">
         {{ blog.title }}
       </h3>
@@ -58,6 +58,11 @@
     &:hover {
       .blog__title {
         color: $primary;
+        background: $text-gradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 24px;
+        transition: all ease 0.3s;
       }
     }
 

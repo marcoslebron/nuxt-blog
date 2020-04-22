@@ -234,7 +234,9 @@
     font-size: 3rem;
     font-family: 'Tiempos Headline', Arial, sans-serif;
     color: $secondary;
-
+    background: $text-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     @media (min-width: $screen-sm){
       font-size: 4rem;
     }

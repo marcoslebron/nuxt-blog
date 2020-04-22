@@ -1,7 +1,7 @@
 ---
 name: 'como-utilizar-el-flexbox'
 trans: 'how-to-use-the-flexbox'
-title: Como utilizar el flexbox
+title: Aprendiendo a como utilizar el flexbox [Español]
 year: 21 Febrero 2020
 updatedDate: 21 Marzo 2020
 color: '#edece7'

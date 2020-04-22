@@ -1,7 +1,7 @@
 ---
 name: 'como-configurar-typescript-en-vuejs'
 trans: 'how-to-setup-vue-with-typescript'
-title: Como configurar TypeScript en vuejs
+title: Como configurar TypeScript en vuejs [Español]
 year: 26 Mar 2020
 updatedDate: 26 Mar 2020
 color: '#edece7'
