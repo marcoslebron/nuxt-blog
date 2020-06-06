@@ -157,7 +157,7 @@ Defines the position of the elements with respect to the secondary axis
 ```css
   #wrapper {
     display: flex;
-	flex-direction: row;
+	  flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
   }
