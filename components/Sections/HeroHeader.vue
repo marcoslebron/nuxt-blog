@@ -13,7 +13,7 @@
       h4 {{ $t('heroSubHeader')}}
       
     .hero-img
-      ImageResponsive(:imageURL="`marcos-lebron.png`"
+      ImageResponsive(:imageURL="`marcos2.jpg`"
         :classes="'cardThumbnail'"
         :width="'300'"
         :height="'324'"
@@ -82,8 +82,13 @@ export default {
       }
     }
     .hero-img{
+      padding-top: 30px;
       @media (max-width: $screen-sm){
         padding: 60px 0;
+      }
+      img {
+        border-radius: 50%;
+        max-width: 200px;
       }
     }
   }

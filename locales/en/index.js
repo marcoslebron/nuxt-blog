@@ -12,7 +12,7 @@ export default {
   home: 'Home',
   heroHeader: "I'm a Frontend Developer,",
   headerAnimateArray: ['I create', 'I innovate', 'I develop', 'Be a creator not a consumer 😁.'],
-  heroSubHeader: "Wherever you're going on your developer journey, I'm here to share my journey with you.",
+  heroSubHeader: "I am passionate about everything related to the visual part of the web from usability, the interactive part and performance.",
   footer: footer,
   newsletterTitle: "Enjoyed the Read? I know you did!",
   newsletterSubTitle: "Don't miss my next article!, Subscribe to stay in the loop. ",
