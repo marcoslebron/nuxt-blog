@@ -108,6 +108,7 @@ module.exports = {
     '@nuxtjs/style-resources',
     ['nuxt-i18n', I18N],
     'nuxt-webfontloader',
+    '@nuxtjs/sitemap'
   ],
 
   styleResources: {
