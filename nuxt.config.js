@@ -110,7 +110,9 @@ module.exports = {
     'nuxt-webfontloader',
     '@nuxtjs/sitemap'
   ],
-
+  sitemap: {
+    hostname: 'https://marcoslebron.com',
+  },
   styleResources: {
     scss: [
       '@/assets/css/utilities/_variables.scss',
