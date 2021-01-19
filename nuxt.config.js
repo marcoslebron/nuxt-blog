@@ -32,7 +32,7 @@ module.exports = {
     productionUrl
   },
   head: {
-    title: 'Marcos Lebron | Front-end Developer',
+    title: "Marcos Lebron I'm a Frontend Developer",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' },
@@ -41,7 +41,7 @@ module.exports = {
       { name: 'theme-color', content: '#c1c1c1' },
       { name: 'robots', content: 'index, follow' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@@lebronmarcos' },
+      { name: 'twitter:site', content: '@lebronmarcos' },
       { property: 'og:updated_time', content: builtAt }
     ],
     link: [
@@ -95,26 +95,15 @@ module.exports = {
             return md.render(body)
           }
         }
-      }, {
-        test: /\.(jpe?g|png)$/i,
-        loader: 'responsive-loader',
-        options: {
-          placeholder: true,
-          quality: 60,
-          size: 1400,
-          adapter: require('responsive-loader/sharp')
-        }
-      }, {
-        test: /\.(gif|svg)$/,
-        loader: 'url-loader',
-        query: {
-          limit: 1000,
-          name: 'img/[name].[hash:7].[ext]'
-        }
       });
     }
   },
-  plugins: ['~/plugins/lazyload', '~/plugins/vue-typed-js', '~/plugins/disqus', '~/plugins/globalComponents', { src: '~plugins/ga.js', mode: 'client', ssr: false }],
+  plugins: [
+    '~/plugins/lazyload', 
+    '~/plugins/vue-typed-js', 
+    '~/plugins/disqus', 
+    '~/plugins/globalComponents', 
+    { src: '~plugins/ga.js', mode: 'client', ssr: false }],
   modules: [  
     '@nuxtjs/style-resources',
     ['nuxt-i18n', I18N],

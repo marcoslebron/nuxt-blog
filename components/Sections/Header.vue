@@ -2,7 +2,7 @@
   header.header(:class="{ 'navbar--hidden': !showNavbar }")
     .container
       nuxt-link.logo-link(to="/")
-        img(src="~/assets/images/logo-ml.svg" alt="Image that shows the logo of the website www.marcoslebron.com")
+        img(src="~assets/images/logo-ml.svg" alt="Image that shows the logo of the website www.marcoslebron.com")
       .drawer-toggle(role="button" @click="open")
         .bar
         .bar
