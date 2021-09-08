@@ -106,10 +106,11 @@ module.exports = {
     { src: '~plugins/ga.js', mode: 'client', ssr: false }],
   modules: [  
     '@nuxtjs/style-resources',
-    ['nuxt-i18n', I18N],
     'nuxt-webfontloader',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/i18n'
   ],
+  i18n: {...I18N},
   sitemap: {
     hostname: 'https://marcoslebron.com',
   },
