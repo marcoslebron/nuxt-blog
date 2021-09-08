@@ -12,5 +12,7 @@
 
 ## ⚡️ Live
 [Check it live](https://marcoslebron.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/50c293c4-abe1-4762-aca1-fc9a940d6a9f/deploy-status)](https://app.netlify.com/sites/marcosnuxt-blog/deploys)
+
 
 ## ✨ Quick start
