@@ -11,15 +11,10 @@
     
     .social
       .share-text Share This Post
-      //- img(src='~/assets//images/share.png')
       network(network='facebook')
         img(src='~/assets/images/fb.svg')
       network(network='twitter')
         img(src='~/assets/images/tw.svg')
-      //- network(network='pinterest')
-      //-   img(src='../../../images/icons/pinterest.png')
-      //- network(network='email')
-      //-   img(src='../../../images/icons/email_white.png')
 </template>
 <script lang="js">
 import SocialSharing from "./SocialSharing";

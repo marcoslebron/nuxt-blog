@@ -1,59 +1,53 @@
-<template lang="html">
-  <div
-    v-lazy-container="{ selector: 'img' }"
-    :class="`image-placeholder ${isRounded}`"
-  >
-    <img
-      itemprop="image"
+<template lang="pug">
+  div(v-lazy-container="{ selector: 'img' }"
+    :class="`image-placeholder ${isRounded}`")
+    img(itemprop="image"
       :data-src="imageRequired"
       :data-loading="imageRequired.placeholder"
       :width="width"
       :height="height"
       :class="classes"
-      :alt="alt"
-    />
-  </div>
+      :alt="alt")
 </template>
 
 <script>
 export default {
   props: {
     imageURL: {
-      type: String
+      type: String,
     },
     alt: {
-      type: String
+      type: String,
     },
     width: {
-      type: String
+      type: String,
     },
     height: {
-      type: String
+      type: String,
     },
     classes: {
-      type: String
+      type: String,
     },
     alt: {
-      type: String
+      type: String,
     },
     rounded: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
-    imageRequired () {
-      return require(`../assets/images/${this.imageURL}`)
+    imageRequired() {
+      return require(`../assets/images/${this.imageURL}`);
     },
-    isRounded () {
-      return this.rounded ? 'image-placeholder--rounded' : ''
-    }
-  }
-}
+    isRounded() {
+      return this.rounded ? "image-placeholder--rounded" : "";
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
-
 .image-placeholder {
   overflow: hidden;
   text-align: center;
@@ -65,16 +59,15 @@ export default {
 }
 
 img {
-  transition: all ease .3s;
+  transition: all ease 0.3s;
   opacity: 0;
 
-  &[lazy='loading'] {
+  &[lazy="loading"] {
     opacity: 1;
     filter: blur(15px);
   }
-  &[lazy='loaded'] {
+  &[lazy="loaded"] {
     opacity: 1;
   }
 }
-
 </style>
